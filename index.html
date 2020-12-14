@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="game-wrapper">
+      <img
+        id="gamezone-logo"
+        src="images/gamezone-logo.png"
+        alt="logo de gamezone"
+      />
+
+      <div id="game-container" style="display: none">
+        <div id="medal-container"></div>
+        <div id="level-number" style="display: none"></div>
+        <div id="box-character-container" class="neutral-box"></div>
+
+        <img
+          id="skipped-message"
+          src="images/skipped-police.png"
+          alt="skipped-message"
+          style="display: none"
+        />
+        <img id="picture" src="" alt="photo de jeu" />
+        <div id="chrono"></div>
+        <div id="experience-counter"></div>
+        <div class="user-input">
+          <input id="game-name" type="text" />
+          <div id="success-failure-container"></div>
+        </div>
+      </div>
+      <div id="game-over" style="display: none">
+        <h2>Score</h2>
+        <div class="score-container">
+          <div id="medal-game"></div>
+          <div id="score-game"></div>
+          <!-- <p id="reward" style="display: none"></p> -->
+        </div>
+      </div>
+      <img id="console-background" src="images/game_play.png" />
+      <button id="start-button" class="btn">Commencer</button>
+      <img
+        id="confirm-button"
+        class="btn"
+        src="images/a-button.png"
+        alt="bouton A"
+      />
+      <img
+        id="skip-button"
+        class="btn"
+        src="images/b-button.png"
+        alt="bouton B"
+      />
+    </div>
+    <script type="text/javascript" src="script.js"></script>
+  </body>
+</html>
