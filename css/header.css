@@ -50,13 +50,11 @@ color: #F6CD40;
   padding: 0;
 }
 
-.logo-gamezone {
+.logo-gamezone-mobile {
   position: absolute;
   margin-left: 20px;
   margin-top: 15px;
 }
-
-
 
 .burger {
   width: 100%;
@@ -140,8 +138,19 @@ li {
   display: none;
 }
 
+.logo-gamezone {
+  position: sticky;
+  margin-left: 20px;
+  margin-top: 0px;
+}
+
+.logo-gamezone-mobile {
+  display: none;
+}
+
 .links {
   display: flex;
+  padding: 0px 360px 0px 20px;
 }
 
 
