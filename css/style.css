@@ -51,6 +51,7 @@ html, body {
   text-align: center;
   font-family: "commando";
   letter-spacing: 1px;
+  line-height: 28px;
 }
 
 .btn {
@@ -84,17 +85,16 @@ html, body {
 
 .logo-gz {
   width: 50%;
-  height: 50%;
 }
 
 .line-extrem-left {
-  border: 1px solid black;
+  border: 0.5px solid black;
   height: 50px;
   margin: auto 3px auto 0px;
 }
 
 .line-left {
-  border: 1px solid black;
+  border: 0.5px solid black;
   width: 0;
   margin-right: 5px;
 }
@@ -161,6 +161,8 @@ html, body {
   font-family: "josefin";
   line-height: 24px;
   margin: 0;
+  text-align: center;
+  font-weight: lighter;
 }
 
 
@@ -194,6 +196,18 @@ html, body {
   line-height: 24px;
 }
 
+.title-game {
+  margin-top: 50px;
+  font-family: "josefin";
+  font-weight: lighter;
+  color: #D2D2D2;
+  line-height: 24px;
+}
+
+.title-game > span {
+  font-family: "commando";
+}
+
 .title > span {
   font-family: "commando";
 }
@@ -203,4 +217,175 @@ html, body {
   font-family: "josefin";
   font-weight: lighter;
   line-height: 24px;
+}
+
+.card {
+  padding: 65px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.card-content {
+  border: 1px solid rgba(128, 128, 128, 0.24);
+  width: 150px;
+  height: 300px;
+  background-color: white;
+  align-self: center;
+}
+
+@media screen and (min-width: 768px) {
+  .header-background {
+    height: 521px;
+    line-height: 38px;
+  }
+
+  .container-parc {
+    padding: 65px;
+  }
+
+  .content-attractions {
+    padding: 65px;
+  }
+  
+  .content-game-center {
+    padding: 65px;
+  }
+  
+  .content-battle-kart {
+    padding: 65px;
+  }
+
+  .card {
+    padding: 65px;
+    display: flex;
+    justify-content: space-around;
+  }
+
+}
+
+@media screen and (min-width: 992px){
+  .header-background {
+    height: 588px;
+  }
+
+  .header-background h1 {
+    font-size: 40px;
+    line-height: 48px;
+  }
+
+  .container-parc {
+    display: flex;
+    flex-direction: row-reverse;
+    padding: 100px;
+  }
+
+  .logo-gz {
+    width: 100%;
+  }
+  .game-zone-text {
+    max-width: 900px;
+  }
+
+  .game-zone-text > p {
+    width: 70%;
+  }
+
+  .logo-game-zone {
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+
+  .btn {
+    font-size: 14px;
+  }
+
+  .banner {
+    padding: 45px 100px 45px 100px;
+
+  }
+
+  .row {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+
+  .picture-content > p {
+    font-size: 18px;
+  }
+
+  .content-attractions {
+    padding: 100px;
+  }
+
+  .content-battle-kart {
+    padding: 100px;
+  }
+
+  .content-game-center {
+    padding: 100px;
+  }
+
+}
+
+@media screen and (min-width: 1200px){
+  .header-background {
+    height: 735px;
+  }
+
+  .container-parc {
+    padding: 135px;
+  }
+
+  .title-park {
+    font-size: 25px;
+  }
+
+  .game-zone-text > p {
+    font-size: 18px;
+    line-height: 24px;
+  }
+  
+  .line-left {
+    margin-right: 10px;
+  }
+
+  .container-park-attraction {
+  display: flex;
+  }
+
+  .content-attractions {
+    padding: 40px;
+  }
+
+  .content-game-center {
+    padding: 40px;
+  }
+
+  .content-battle-kart {
+    padding: 40px;
+  }
+
+  .content-attractions > img {
+    margin-top: 45px;
+  }
+  .content-battle-kart > img {
+    margin-top: 45px;
+  }
+  .content-game-center > img {
+    margin-top: 45px;
+  }
+
+  .title {
+    margin-top: 25px;
+  }
+
+  .title-game {
+    margin-top: 25px;
+  }
+
+  .card-content {
+    width: 250px;
+  }
+
+
 }
