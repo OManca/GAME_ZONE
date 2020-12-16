@@ -306,9 +306,6 @@ function displayPicture() {
   const displayGamePicture =
     "images/games-picture/image" + randomNumber + ".jpg";
   gamePicture.src = displayGamePicture;
-
-  boxCharacterContainer.classList.remove("sad-box");
-  // boxCharacterContainer.classList.add("neutral-box");
 }
 
 function startTimer() {
@@ -395,15 +392,15 @@ function displayMedals(element) {
 }
 
 function displayReward() {
-  if (experience >= 800) {
+  if (experience >= 20000) {
     rewardText.innerHTML = "bravo";
-  } else if (experience >= 600) {
+  } else if (experience >= 10000) {
     rewardText.innerHTML = "pas mal";
-  } else if (experience >= 400) {
+  } else if (experience >= 7000) {
     rewardText.innerHTML = "bof";
-  } else if (experience >= 200) {
+  } else if (experience >= 4500) {
     rewardText.innerHTML = "pas top";
-  } else if (experience < 200) {
+  } else if (experience < 2000) {
     rewardText.innerHTML = "naze";
   }
 }
