@@ -47,6 +47,11 @@ header nav .logo {
     margin: 0 10px;
 }
 
+.account-wrapper > a > .cart {
+  width: 18px;
+  height: 18px;
+}
+
 .personal-info div {
     margin: 2px 0;
 }
@@ -55,6 +60,37 @@ header nav .logo {
     width: 24px;
     height: 20px;
 }
+
+.content-mobile {
+  position: absolute;
+  display: none;
+  width: 100%;
+  height: 100%;
+  float: none;
+  text-align: center;
+  background-color: black;
+  top: 100px;
+  right: 0;
+  left: 0;
+  padding: 0 20px;
+  z-index: 1;
+}
+
+li > a {
+  text-decoration: none;
+}
+
+li > a:hover {
+  color:#F6CD40;
+}
+
+.content-mobile > li {
+  margin: 20px;
+  list-style: none;
+}
+
+
+
 
 
 /* Nav mobile */
@@ -70,7 +106,11 @@ header nav .logo {
 }
 
 /* Nav Desktop */
-@media screen and (min-width: 1200px){    
+@media screen and (min-width: 1200px){  
+  
+  .content-mobile {
+    display: none;
+  }
     header nav .link, .languages {
         display: block;
     }
@@ -128,8 +168,7 @@ header nav .logo {
 
     .menu-wrapper:hover .menu-arrow {
         background-image: url(/images/arrow.png);
-    }
-    
+    }    
 
     .languages {
         display: block;
@@ -140,8 +179,8 @@ header nav .logo {
     }
 
     .languages img {
-        height: 38px;
-        width: 38px;
+        height: 18px;
+        width: 18px;
     }
 
     .hamburger {
