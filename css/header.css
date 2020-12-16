@@ -102,7 +102,9 @@ li > a:hover {
 
 /* Nav Desktop */
 @media screen and (min-width: 992px){
-  
+    .content-mobile {
+        display: none;
+      }
 }
 
 /* Nav Desktop */
