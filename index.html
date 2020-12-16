@@ -7,6 +7,18 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <div class="game-rules">
+      <h2 class="rules-title">Régle du jeu</h2>
+      <p class="rules-text">
+        Trouvez simplement le nom du jeu et appuyer sur le bouton A. Pour
+        passer, appuyez sur le bouton B. Trouvez le maximum de jeu pour marquer
+        le plus de points possible avant la fin du temps imparti. Attention,
+        vous devez être précis dans le choix des noms.
+        <span class="red-text"
+          >Exemple: Mario Bros est différent de Super Mario Bros</span
+        >
+      </p>
+    </div>
     <div class="game-wrapper">
       <img
         id="gamezone-logo"
@@ -36,9 +48,13 @@
       <div id="game-over" style="display: none">
         <h2>Score</h2>
         <div class="score-container">
-          <div id="medal-game"></div>
-          <div id="score-game"></div>
-          <!-- <p id="reward" style="display: none"></p> -->
+          <p id="reward-text"></p>
+
+          <div class="final-score">
+            <div id="medal-game"></div>
+            <div id="score-game"></div>
+          </div>
+          <button id="continue" class="btn">Continue ?</button>
         </div>
       </div>
       <img id="console-background" src="images/game_play.png" />

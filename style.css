@@ -20,8 +20,35 @@ body {
   height: 100vh;
   width: 100vw;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.game-rules {
+  display: flex;
+  flex-direction: column;
+  border: 2px solid black;
+  width: 70%;
+  margin: 0 auto;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.rules-title {
+  font-family: "Pixeled";
+  font-size: 8px;
+  color: black;
+}
+
+.rules-text {
+  font-family: "Pixeled";
+  font-size: 6px;
+  color: black;
+}
+
+.red-text {
+  color: red;
 }
 
 .btn {
@@ -31,13 +58,13 @@ body {
 }
 
 #start-button {
-  padding: 10px 30px;
+  padding: 2px 10px;
   position: absolute;
-  top: 65%;
-  left: 40%;
+  top: 68%;
+  left: 42%;
   background-color: #f6cd40;
-  font-family: "Commando";
-  font-size: 20px;
+  font-family: "Pixeled";
+  font-size: 11px;
   animation: blink 2s linear infinite;
 }
 
@@ -107,13 +134,15 @@ body {
 #level-number {
   position: absolute;
   top: 43%;
-  left: 46%;
+  left: 41%;
   font-family: "Commando";
   font-family: "Pixeled";
+  color: white;
+  font-size: 24px;
 }
 
 #box-character-container {
-  display: none;
+  z-index: 2;
 }
 
 .neutral-box {
@@ -123,6 +152,9 @@ body {
   height: 50px;
   width: 50px;
   background-position: center;
+  position: absolute;
+  top: 60%;
+  left: 10%;
 }
 
 .happy-box {
@@ -132,6 +164,9 @@ body {
   height: 50px;
   width: 50px;
   background-position: center;
+  position: absolute;
+  top: 60%;
+  left: 10%;
 }
 
 .sad-box {
@@ -141,6 +176,10 @@ body {
   height: 50px;
   width: 50px;
   background-position: center;
+
+  position: absolute;
+  top: 60%;
+  left: 10%;
 }
 
 .user-input {
@@ -193,14 +232,14 @@ body {
   top: 22%;
   left: 52%;
   font-family: "Pixels";
-  font-size: 50px;
+  font-size: 40px;
   background-color: white;
   display: flex;
   align-items: flex-end;
   height: 25px;
 }
 
-.platine-medal {
+.platin-medal {
   background-image: url(images/platin-medal.png);
 }
 
@@ -238,13 +277,31 @@ body {
   font-size: 26px;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
+}
+
+#game-over h2 {
+  margin: 0;
 }
 
 .score-container {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
+}
+
+#reward-text {
+  color: white;
+  font-size: 20px;
+}
+
+.final-score {
+  display: flex;
+}
+
+.final-score .score-game {
+  margin-left: 0;
 }
 
 #score-game {
@@ -253,6 +310,14 @@ body {
   height: 35px;
   display: flex;
   align-items: flex-end;
+}
+#continue {
+  z-index: 1;
+  color: white;
+  font-family: "Pixeled";
+  font-size: 12px;
+  background-color: black;
+  animation: blink 2s linear infinite;
 }
 
 @keyframes blink {

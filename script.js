@@ -17,6 +17,8 @@ const gameOverScreen = document.getElementById("game-over");
 const gameContainer = document.getElementById("game-container");
 const scoreGame = document.getElementById("score-game");
 const gameOverMedal = document.getElementById("medal-game");
+const rewardText = document.getElementById("reward-text");
+const continueButton = document.getElementById("continue");
 
 let confirmCounter = 0;
 let experience = 0;
@@ -46,7 +48,7 @@ const gameNameArray = [
   "Kingdom hearts 2",
   "La legende de Thor",
   "pokemon",
-  "zelda 1",
+  "blazblue",
   "Lemmings",
   "Little nightmares",
   "Luigi's mansion",
@@ -61,7 +63,7 @@ const gameNameArray = [
   "Mickey Mania",
   "Mirror's edge",
   "super monkey ball",
-  "Mortal kombat 3",
+  "Mortal kombat",
   "Northgard",
   "Outlast",
   "Overwatch",
@@ -85,7 +87,7 @@ const gameNameArray = [
   "deceit",
   "Deus ex human revolution",
   "Dishonered",
-  "Donkey Kong",
+  "System Shock 2",
   "doom",
   "dota 2",
   "Double dragon 2",
@@ -106,7 +108,7 @@ const gameNameArray = [
   "For honor",
   "grandia 2",
   "gta 4",
-  "Harry potter et la chambre des secrets",
+  "Harry potter",
   "hedz",
   "Hitman absolution",
   "Ice climbers",
@@ -136,7 +138,7 @@ const gameNameArray = [
   "shenmue 2",
   "Street fighters 2",
   "zelda ocarina of time",
-  "styx : master of shadow",
+  "styx master of shadow",
   "super ghouls ‘n ghosts",
   "Super metroid",
   "super smash bros",
@@ -169,7 +171,7 @@ const gameNameArray = [
   "league of legends",
   "observer system redux",
   "phantom doctrine",
-  "red dead redemption",
+  "red dead redemption 2",
   "paper mario la porte millenaire",
   "resident evil 7",
   "resident evil 3",
@@ -202,7 +204,72 @@ const gameNameArray = [
   "Baten Kaitos origins",
   "Swords and serpents",
   "street gangs",
-  "betond good and evil",
+  "beyond good and evil",
+  "killer 7",
+  "kirby air ride",
+  "limbo",
+  "lost odyssey",
+  "mario bros",
+  "mass effect",
+  "medievil",
+  "metal gear solid 5",
+  "metroid fusion",
+  "minecraft",
+  "new super mario bros",
+  "ninja gaiden",
+  "oboro muramasa",
+  "odin sphere",
+  "okami",
+  "pacman",
+  "pn 03",
+  "prince of persia sands of time",
+  "punch out",
+  "puyo pop fever",
+  "rainbow 6 siege",
+  "ratchet and clank",
+  "rocket league",
+  "sea of thieves",
+  "sekiro die twice",
+  "shinobi",
+  "sims",
+  "sonic adventures 2 battle",
+  "splinter cell",
+  "spyro",
+  "super mario galaxy",
+  "tekken 3",
+  "the last of us 2",
+  "titanfall 2",
+  "uncharted 4",
+  "worms",
+  "batman forever",
+  "bioshock",
+  "bioshock 2",
+  "bloodborne",
+  "catherine",
+  "crash bandicoot",
+  "crazy taxi",
+  "cuphead",
+  "dark souls",
+  "dead space",
+  "death stranding",
+  "destiny 2",
+  "detroit become human",
+  "devil may cry",
+  "donkey kong",
+  "donkey kong country",
+  "dr mario",
+  "earthbound",
+  "final fantasy x 10",
+  "fire emblem 7",
+  "fortnite",
+  "geist",
+  "golden sun",
+  "gran tourismo",
+  "gris",
+  "guild wars 2",
+  "guilty gears",
+  "halo 2",
+  "ikaruga",
 ];
 //chargement des images dans le cache
 function preload() {
@@ -239,12 +306,13 @@ function displayPicture() {
   const displayGamePicture =
     "images/games-picture/image" + randomNumber + ".jpg";
   gamePicture.src = displayGamePicture;
-  boxCharacterContainer.classList.remove("happy-box");
+
   boxCharacterContainer.classList.remove("sad-box");
-  boxCharacterContainer.classList.add("neutral-box");
+  // boxCharacterContainer.classList.add("neutral-box");
 }
 
 function startTimer() {
+  timer = 60;
   timerId = setInterval(function () {
     timer--;
     chrono.innerText = timer;
@@ -254,6 +322,7 @@ function startTimer() {
       gameOverScreen.style.display = "flex";
       setExp(scoreGame);
       displayMedals(gameOverMedal);
+      displayReward();
     }
   }, 1000);
 }
@@ -268,19 +337,25 @@ function setExp(element) {
   element.innerHTML = zeros + extStr;
 }
 
-startButton.addEventListener("click", function () {
+function startGame() {
+  gameOverScreen.style.display = "none";
   gameContainer.style.display = "flex";
   startButton.style.display = "none";
   const gameZoneLogo = document.getElementById("gamezone-logo");
   gameZoneLogo.style.display = "none";
+  experience = 0;
+  confirmCounter = 0;
   setExp(experienceCounter);
   displayPicture();
   startTimer();
-});
+}
+
+startButton.addEventListener("click", startGame);
+continueButton.addEventListener("click", startGame);
 
 function incrementLevel() {
   confirmCounter++;
-  levelNumber.innerHTML = "Niveau" + confirmCounter;
+  levelNumber.innerHTML = "Niveau " + confirmCounter;
   levelNumber.style.display = "block";
   setTimeout(function () {
     levelNumber.style.display = "none";
@@ -298,6 +373,7 @@ function incrementExperience() {
 }
 
 function displayMedals(element) {
+  element.style.display = "block";
   if (experience >= 800) {
     element.classList.add("platine-medal");
     element.classList.remove("gold-medal");
@@ -314,22 +390,23 @@ function displayMedals(element) {
     element.classList.add("bronze-medal");
   } else if (experience < 200) {
     element.classList.remove("bronze-medal");
+    element.style.display = "none";
   }
 }
 
-// function displayReward() {
-//   if (experience >= 800) {
-
-//   } else if (experience >= 600) {
-
-//   } else if (experience >= 400) {
-
-//   } else if (experience >= 200) {
-
-//   } else if (experience < 200) {
-
-//   }
-// }
+function displayReward() {
+  if (experience >= 800) {
+    rewardText.innerHTML = "bravo";
+  } else if (experience >= 600) {
+    rewardText.innerHTML = "pas mal";
+  } else if (experience >= 400) {
+    rewardText.innerHTML = "bof";
+  } else if (experience >= 200) {
+    rewardText.innerHTML = "pas top";
+  } else if (experience < 200) {
+    rewardText.innerHTML = "naze";
+  }
+}
 
 function displaySkippedMessage() {
   skippedMessage.style.display = "block";
@@ -339,10 +416,14 @@ function displaySkippedMessage() {
 }
 
 skipButton.addEventListener("click", function () {
+  boxCharacterContainer.classList.add("sad-box");
+  boxCharacterContainer.classList.remove("neutral-box");
+
   experience = experience - 100;
   if (experience < 0) {
     experience = 0;
   }
+  inputField.value = "";
   setExp(experienceCounter);
   displaySkippedMessage();
   displayMedals(medalContainer);
