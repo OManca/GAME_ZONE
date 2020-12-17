@@ -1,4 +1,4 @@
-body { 
+/* body { 
     margin:0;
     padding:0;
 }
@@ -8,4 +8,8 @@ body {
     bottom:0; 
     right:0; 
     left:0; 
+} */
+
+#carte {
+    height: 80vh;
 }
