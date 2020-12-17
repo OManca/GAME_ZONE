@@ -1,0 +1,167 @@
+@font-face {
+  font-family: "commando";
+  src: url("../fonts/commando.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "josefin";
+  src: url("../fonts/Josefin_Sans/JosefinSans-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: 'josefin';
+  src : url('../fonts/Josefin_Sans/JosefinSans-Light.ttf') format("truetype");
+  font-weight: lighter;
+}
+
+@font-face {
+  font-family: 'josefin';
+  src: url("../fonts/Josefin_Sans/JosefinSans-Bold.ttf") format("truetype");
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: 'josefin';
+  src: url("../fonts/Josefin_Sans/JosefinSans-SemiBold.ttf") format("truetype");
+  font-weight: medium;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  height: 100vh;
+  background: radial-gradient(#ffffff, #F2F2F2);
+}
+
+.header-background {
+  background-image: url(../images/ticket-background.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 350px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.header-background h1 {
+  color: #F6CD40;
+  text-align: center;
+  font-family: "commando";
+  letter-spacing: 1px;
+  line-height: 28px;
+}
+
+.btn {
+  border: none;
+  background: #F6CD40;
+  color: #71388B;
+  cursor: pointer;
+  box-shadow: -2px 2px 0px 0px #71388B;
+  padding: 8px 10px 8px 10px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  font-family: "commando";
+  letter-spacing: 2px;
+}
+
+.btn:hover {
+  background: #f1c01c;
+}
+
+.price-day {
+  font-family: "commando";
+  color: #71388B;
+  text-align: center;
+  letter-spacing: 2px;
+  margin-top: 70px;
+}
+
+.price-day > span {
+  color: black;
+  font-family: "josefin";
+  font-weight: lighter;
+  letter-spacing: 0;
+}
+
+.card {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  text-align: center;
+  margin-top: 70px;
+}
+
+.card-content {
+  border: 1px solid grey;
+  width: 250px;
+  height: 100%;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.card-content-after {
+  border: 1px solid grey;
+  width: 250px;
+  height: 100%;
+  margin-top: 20px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.title-card {
+  margin-top: 40px;
+  font-size: 20px;
+  font-family: "commando";
+  letter-spacing: 2px;
+  color: #71388B;
+}
+
+.total-day {
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid black;
+  padding: 10px;
+  width: 100px;
+  margin: 50px auto 50px auto;
+}
+
+.card-content > p {
+  font-family: "josefin";
+}
+
+.card-content-after > p {
+  font-family: "josefin";
+}
+
+.total {
+  font-family: "commando";
+}
+.price {
+  font-family: "josefin";
+}
+
+@media screen and (min-width: 992px) {
+  .header-background h1 {
+    font-size: 40px;
+    letter-spacing: 2px;
+    line-height: 45px;
+  }
+
+  .card {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    margin-top: 70px;
+  }
+
+  .card-content,
+  .card-content-after {
+    width: 240px;
+    margin-top: 0px;
+  }
+
+  .total-day {
+    width: 700px;
+  }
+}
