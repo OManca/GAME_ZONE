@@ -1,0 +1,15 @@
+section {
+    display: flex;
+}
+img {
+    position: absolute;
+    width: auto;
+    height: 550px;
+}
+.search {
+    display: flex ;
+    flex-direction: column;
+}
+.check {
+    display: none;
+}
