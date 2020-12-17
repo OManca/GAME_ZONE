@@ -1,12 +1,29 @@
 @font-face {
-  font-family: commando;
-  src: url(/fonts/commando.ttf) format("truetype");
+  font-family: "commando";
+  src: url("../fonts/commando.ttf") format("truetype");
 }
 
 @font-face {
-  font-family: JosefinSans;
-  src: url(/fonts/Josefin_Sans/JosefinSans-Bold.ttf) format("truetype");
+  font-family: "josefin";
+  src: url("../fonts/Josefin_Sans/JosefinSans-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: 'josefin';
+  src : url('../fonts/Josefin_Sans/JosefinSans-Light.ttf') format("truetype");
+  font-weight: lighter;
+}
+
+@font-face {
+  font-family: 'josefin';
+  src: url("../fonts/Josefin_Sans/JosefinSans-Bold.ttf") format("truetype");
   font-weight: bold;
+}
+
+@font-face {
+  font-family: 'josefin';
+  src: url("../fonts/Josefin_Sans/JosefinSans-SemiBold.ttf") format("truetype");
+  font-weight: medium;
 }
 
 html,
@@ -20,7 +37,7 @@ body {
 }
 
 .page-header {
-  background-image: url(images/attractions-page-header.svg);
+  background-image: url(../images/attractions-page-header.svg);
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
@@ -38,21 +55,24 @@ body {
   margin: 0;
   line-height: 38px;
   font-size: 24px;
-}
-
-.page-header .btn {
-  margin-top: 40px;
+  font-family: "commando";
+  letter-spacing: 1px;
 }
 
 .btn {
-  border: 0;
-  outline: none;
+  border: none;
+  background: #F6CD40;
+  color: #71388B;
   cursor: pointer;
-  background-color: #f6cd40;
-  color: #71388b;
-  box-shadow: -3px 3px 0px 1px #71388b;
-  padding: 7px 25px;
-  font-family: commando;
+  box-shadow: -2px 2px 0px 0px #71388B;
+  padding: 8px 10px 8px 10px;
+  margin-top: 30px;
+  font-family: "commando";
+  letter-spacing: 1px;
+}
+
+.btn:hover {
+  background: #f1c01c;
 }
 
 .widget-container {
@@ -71,7 +91,6 @@ body {
 
 .widget-header {
   width: 100%;
-  height: 100px;
 }
 
 .widget-content {
@@ -80,22 +99,36 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: calc(100% - 100px);
+  height: 900px;
 }
 
 .widget-content h3 {
   color: #f6cd40;
+  font-family: "commando";
   margin-bottom: 0;
+  font-size: 20px;
+  letter-spacing: 1px;
+  margin-top: 50px;
+  font-size: 20px;
 }
 
 .widget-content h5 {
   color: #c9116a;
   margin-bottom: 0;
+  font-size: 15px;
+  margin-top: 5px;
+  letter-spacing: 1px;
+  font-family: "commando";
 }
 
 .widget-content div {
   color: white;
   margin-top: 5px;
+}
+
+.subtitle {
+  font-family:"josefin";
+  font-weight: lighter;
 }
 
 .widget-content .btn {
@@ -107,20 +140,42 @@ body {
 
 /* Nav Desktop */
 @media screen and (min-width: 992px) {
+  .widget-content h3 {
+    font-size: 25px;
+  }
+  
+  .widget-content h5 {
+    font-size: 18px;
+  }
 }
 
 /* Nav Desktop */
 @media screen and (min-width: 1200px) {
   .page-header h1 {
-    width: 23%;
+    width: 30%;
+    font-size: 30px;
   }
 
   .widget-container {
     padding: 40px;
   }
 
+  .widget-content h3 {
+    font-size: 30px;
+    margin-top: 30px;
+  }
+
+  .widget-content h5 {
+    margin-top: 20px;
+    font-size: 20px;
+  }
+
   .widget {
     width: 48%;
     margin: 10px;
+  }
+
+  .btn {
+    font-size: 14px;
   }
 }
