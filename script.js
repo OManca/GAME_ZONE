@@ -1,4 +1,3 @@
-
 let tarifone = 12.50;
 let tariftwo = 13.50;
 let tariftree = 15;
@@ -24,5 +23,9 @@ for (let y = 0; y < inputs.length ; y++) {
 		sumTotal.innerHTML = devis
 		console.log(devis);
 	});
+<<<<<<< HEAD
 };
 >>>>>>> feature/rate_calculator:addeventlistener to input
+=======
+};
+>>>>>>> 73a426c8b667f920cb0b4bea8f9b5f85b34e8b9f
