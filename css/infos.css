@@ -175,7 +175,7 @@ body {
   .email-content > input,
   .lastname-content > input,
   .firstname-content > input {
-    width: 240px;
+    width: 200px;
   }
 
   .checkbox-content > label {
@@ -239,6 +239,15 @@ body {
 
   .btn {
     font-size: 12px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .message-content > textarea,
+  .email-content > input,
+  .lastname-content > input,
+  .firstname-content > input {
+    width: 240px;
   }
 }
 
