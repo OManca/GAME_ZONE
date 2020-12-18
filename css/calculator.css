@@ -29,13 +29,11 @@
 html, body {
   margin: 0;
   padding: 0;
-  width: 100vw;
-  height: 100vh;
   background: radial-gradient(#ffffff, #F2F2F2);
 }
 
 .header-background {
-  background-image: url(../images/ticket-background.png);
+  background-image: url("../images/ticket-background.png");
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
@@ -79,12 +77,13 @@ html, body {
   margin-top: 70px;
 }
 
-.price-day > span {
+.calculator {
+  text-align: center;
   color: black;
   font-family: "josefin";
   font-weight: lighter;
-  letter-spacing: 0;
 }
+
 
 .card {
   display: grid;
@@ -96,19 +95,16 @@ html, body {
 .card-content {
   border: 1px solid grey;
   width: 250px;
-  height: 100%;
+  height: 200px;
   margin-right: auto;
   margin-left: auto;
+  margin-top: 30px;
 }
 
-.card-content-after {
-  border: 1px solid grey;
-  width: 250px;
-  height: 100%;
-  margin-top: 20px;
-  margin-right: auto;
-  margin-left: auto;
+.number {
+  margin-top: 40px;
 }
+
 
 .title-card {
   margin-top: 40px;
@@ -119,28 +115,20 @@ html, body {
 }
 
 .total-day {
-  display: flex;
   justify-content: space-between;
   border: 1px solid black;
   padding: 10px;
-  width: 100px;
+  width: 200px;
   margin: 50px auto 50px auto;
+  text-align: center;
+  font-family: "josefin";
 }
 
 .card-content > p {
   font-family: "josefin";
 }
 
-.card-content-after > p {
-  font-family: "josefin";
-}
 
-.total {
-  font-family: "commando";
-}
-.price {
-  font-family: "josefin";
-}
 
 @media screen and (min-width: 992px) {
   .header-background h1 {
@@ -155,13 +143,8 @@ html, body {
     margin-top: 70px;
   }
 
-  .card-content,
-  .card-content-after {
+  .card-content {
     width: 240px;
     margin-top: 0px;
-  }
-
-  .total-day {
-    width: 700px;
   }
 }
