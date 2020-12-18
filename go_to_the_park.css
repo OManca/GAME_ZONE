@@ -54,35 +54,32 @@ a {
 }
 #carte {
     height: 100%;
-
-
+}
+@media screen and (min-width: 750px) and (max-width: 900px){
+    .title {
+        margin:30px 200px;
+    }
+}
+@media screen and (min-width: 901px){
+    .container {
+        display: flex;
+        flex-direction: row;
+    }
+    .informations {
+        width: 50%;
+        font-weight: 400;
+    }
+    .map {
+        width: 80%;
+    }
+    #carte {
+        height: 670px;
+    
+}
 /* 
-.container {
-    display: flex;
-}
-.title {
-    color: #881F6A;
-    font-size: 31px;
-    margin-bottom: 40px;
-}
-.information-blablacar {
-    color: #ffffff;
-    background-color: #323868;
-    padding-left: 30px;
-}
 .informations p {
     width: 410px;
     height: 65px;
     font-size: 18px;
 }
-.informations {
-    width: 50%;
-    font-weight: 400;
-}
-.map {
-    height: 450px;
-    width: 80%;
-}
-#carte {
-    height: 100%;
 } */
