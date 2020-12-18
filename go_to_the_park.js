@@ -22,12 +22,8 @@ function showPosition(position) {
 			}]
 		},
 		router: new L.Routing.osrmv1({
-			language: 'fr',
-			profil: 'bike'
+			language: 'fr'
 		})
 	}).addTo(carte)
 }
-
-
-
 
