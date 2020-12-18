@@ -4,21 +4,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/calandar.css">
     <title>Document</title>
 
 </head>
 
 <body>
-    <h2 id="today"></h2>
+    <h1 id="today"></h1>
     <section>
     <div id="app-calendar"></div>
-    <li>les horaires d’ouverture et de fermeture du jour.</li>
-    <ul>Du lundi au jeudi : 9h-19h</ul>
-    <ul> Du vendredi au samedi : 9h-20h</ul>
-    <ul>Le dimanche : 9h – 18h</ul>
+    <div class="hours-park">
+        <h2>Nos horaires</h2>
+    <div class="hours-day">
+        <p class="day-week"><span class="color-day"></span>Du lundi au jeudi : 9h-19h</p>
+        <p><span class="color-tuesday"></span> Parc fermé tous les premiers mardis de chaque mois</p>
+        <p><span class="color-nocturne"></span>Horaire nocturne du vendredi au samedi : 9h-20h</p>
+
+        <p><span class="color-weekend"></span>Le dimanche : 9h – 18h</p>
+        <p><span class="color-lastsunday"></span>Journées spéciales tousles derniers dimanches de chaque mois</p>
+    </div>
 </section>
-    <script src="script.js"></script>
+    <script src="calandar.js"></script>
 </body>
 
 </html>
