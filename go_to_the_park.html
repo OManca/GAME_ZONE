@@ -1,32 +1,58 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
 
-    <!-- Fichier CSS leaflet  -->
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
-   integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
-   crossorigin=""/>
+	<!-- Fichier CSS leaflet  -->
+	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+		integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+		crossorigin="" />
 
-   <link rel="stylesheet" href="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.css" />
+	<link rel="stylesheet" href="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.css" />
 
-   <link rel="stylesheet" href="https://unpkg.com/leaflet-routing-machine@latest/dist/leaflet-routing-machine.css" />
-<link rel="stylesheet" href="go_to_the_park.css">
+	<link rel="stylesheet" href="https://unpkg.com/leaflet-routing-machine@latest/dist/leaflet-routing-machine.css" />
+	<link rel="stylesheet" href="go_to_the_park.css">
 </head>
+
 <body>
-    <div id="carte"></div>
+	<div class="container">
+	<section class="informations">
+		<h2>SE RENDRE AU PARC</h2>
+		<div class="information-blablacar">
+			<div>
+				<img src="img/cars.png" alt="">
+				<h3>Calculer votre intinéraire en voiture</h3>
+			</div>
+			<p>N’oubliez pas, vous pouvez également covoiturer avec notre partenaire BlaBlacar !</p>
+		</div>
+		<div class="sncf">
+			<div>
+				<img src="img/train.png" alt="">
+				<h3>Venir en train</h3>
+				<p>Accès : gare du Nord Paris</p>
+				<p>Commandez votre trajet en ligne sur le site de la
+					<a href=""> sncf.fr</a> ou au guichet ou automates au sein de votre gare</p>
+			</div>
+		</div>
+	</section>
+	<section class="map">
+		<div id="carte"></div>
+	</section>
+</div>
+	<!-- Fichier JS -->
+	<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+		integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+		crossorigin=""></script>
 
-    <!-- Fichier JS -->
-    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
-   integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
-   crossorigin=""></script>
+	<script src="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.js"></script>
 
-   <script src="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.js"></script>
+	<script src="https://unpkg.com/leaflet-routing-machine@latest/dist/leaflet-routing-machine.js"></script>
 
-   <script src="https://unpkg.com/leaflet-routing-machine@latest/dist/leaflet-routing-machine.js"></script>
-
-   <script src="go_to_the_park.js"></script>
+	<script src="go_to_the_park.js"></script>
 </body>
+
+
 </html>
