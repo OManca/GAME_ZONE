@@ -1,0 +1,201 @@
+@font-face {
+  font-family: "commando";
+  src: url("/fonts/commando.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "josefin";
+  src: url("/fonts/Josefin_Sans/JosefinSans-Regular.ttf") format("truetype");
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: "josefin";
+  src: url("/fonts/Josefin_Sans/JosefinSans-Light.ttf") format("truetype");
+  font-weight: lighter;
+}
+
+@font-face {
+  font-family: "josefin";
+  src: url("/fonts/Josefin_Sans/JosefinSans-Bold.ttf") format("truetype");
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: "josefin";
+  src: url("../fonts/Josefin_Sans/JosefinSans-SemiBold.ttf") format("truetype");
+  font-weight: 500;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  height: 100vh;
+  width: 100vw;
+  background-color: #15172d;
+  overflow-x: hidden;
+}
+
+.main-banner {
+  width: 100%;
+}
+
+.desktop-attraction-description {
+  display: none;
+}
+
+.desktop-player-picture {
+  display: none;
+}
+
+.attraction-title {
+  margin: 16px;
+  font-size: 20px;
+  font-family: "commando";
+  letter-spacing: 1px;
+}
+
+.attraction-subtitle {
+  color: white;
+  font-family: "josefin";
+  margin: 16px;
+}
+
+.yellow-highlight {
+  color: #f6cd40;
+}
+
+.pink-highlight {
+  color: #c9116a;
+}
+
+.attraction-paragraph {
+  margin: 16px;
+  color: white;
+  font-family: "josefin";
+  font-weight: lighter;
+}
+
+.attraction-description {
+  display: flex;
+}
+
+.player-picture {
+  position: relative;
+  width: 45%;
+  height: 88%;
+  top: 50px;
+}
+
+.btn {
+  border: none;
+  background: #f6cd40;
+  color: #71388b;
+  cursor: pointer;
+  box-shadow: -2px 2px 0px 0px #71388b;
+  padding: 8px 10px 8px 10px;
+  width: 155px;
+  font-family: "commando";
+  margin-left: 15px;
+  margin-top: 12px;
+  letter-spacing: 1px;
+}
+
+.btn:hover {
+  background: #f1c01c;
+}
+
+.attraction-video-title-container {
+  background-image: url(../images/lines-background.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  margin-top: 60px;
+}
+
+.attraction-video-title {
+  text-align: center;
+  color: #f1c01c;
+  letter-spacing: 1px;
+  font-family: "commando";
+  font-size: 20px;
+}
+
+.youtube-video-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
+}
+
+@media screen and (min-width: 768px) {
+}
+
+/* Nav Desktop */
+@media screen and (min-width: 992px) {
+  .attraction-titles-section {
+    display: none;
+  }
+  .player-picture {
+    display: none;
+  }
+
+  .desktop-attraction-description {
+    display: flex;
+  }
+
+  .desktop-title-container {
+    flex: 1;
+  }
+
+  .desktop-player-picture {
+    display: block;
+    position: relative;
+    width: 46%;
+    bottom: 113px;
+  }
+
+  .attraction-description {
+    display: none;
+  }
+
+  .attraction-paragraph {
+    margin-left: 50px;
+  }
+
+  .attraction-title {
+    margin-left: 50px;
+    font-size: 20px;
+    font-family: "commando";
+    letter-spacing: 1px;
+  }
+
+  .attraction-subtitle {
+    color: white;
+    font-family: "josefin";
+    margin: 50px;
+  }
+
+  .attraction-youtube-video {
+    height: 100%;
+    width: 60%;
+  }
+
+  .youtube-video-container {
+    display: flex;
+    justify-content: center;
+    height: 500px;
+    align-items: center;
+    margin: 20px;
+    width: 100%;
+  }
+
+  .btn {
+    margin-left: 50px;
+  }
+}
+
+/* Nav Desktop */
+@media screen and (min-width: 1200px) {
+}
