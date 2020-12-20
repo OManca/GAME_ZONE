@@ -1,91 +1,42 @@
 @font-face {
   font-family: "commando";
-  src: url("/fonts/commando.ttf") format("truetype");
+  src: url("../fonts/commando.ttf") format("truetype");
 }
 
 @font-face {
   font-family: "josefin";
-  src: url("/fonts/Josefin_Sans/JosefinSans-Regular.ttf") format("truetype");
-  font-weight: 300;
+  src: url("../fonts/Josefin_Sans/JosefinSans-Regular.ttf") format("truetype");
 }
 
 @font-face {
   font-family: "josefin";
-  src: url("/fonts/Josefin_Sans/JosefinSans-Light.ttf") format("truetype");
+  src: url("../fonts/Josefin_Sans/JosefinSans-Light.ttf") format("truetype");
   font-weight: lighter;
 }
 
 @font-face {
   font-family: "josefin";
-  src: url("/fonts/Josefin_Sans/JosefinSans-Bold.ttf") format("truetype");
+  src: url("../fonts/Josefin_Sans/JosefinSans-Bold.ttf") format("truetype");
   font-weight: bold;
 }
 
 @font-face {
   font-family: "josefin";
   src: url("../fonts/Josefin_Sans/JosefinSans-SemiBold.ttf") format("truetype");
-  font-weight: 500;
+  font-weight: medium;
 }
 
 html,
 body {
-  padding: 0;
   margin: 0;
-  height: 100vh;
+  padding: 0;
   width: 100vw;
+  height: 100vh;
   background-color: #15172d;
-  overflow-x: hidden;
 }
 
-.main-banner {
+.background {
   width: 100%;
-}
-
-.desktop-attraction-description {
-  display: none;
-}
-
-.desktop-player-picture {
-  display: none;
-}
-
-.attraction-title {
-  margin: 16px;
-  font-size: 20px;
-  font-family: "commando";
-  letter-spacing: 1px;
-}
-
-.attraction-subtitle {
-  color: white;
-  font-family: "josefin";
-  margin: 16px;
-}
-
-.yellow-highlight {
-  color: #f6cd40;
-}
-
-.pink-highlight {
-  color: #c9116a;
-}
-
-.attraction-paragraph {
-  margin: 16px;
-  color: white;
-  font-family: "josefin";
-  font-weight: lighter;
-}
-
-.attraction-description {
-  display: flex;
-}
-
-.player-picture {
-  position: relative;
-  width: 45%;
-  height: 88%;
-  top: 50px;
 }
 
 .btn {
@@ -95,15 +46,50 @@ body {
   cursor: pointer;
   box-shadow: -2px 2px 0px 0px #71388b;
   padding: 8px 10px 8px 10px;
-  width: 155px;
+  margin: 30px 15px 30px 0;
   font-family: "commando";
-  margin-left: 15px;
-  margin-top: 12px;
-  letter-spacing: 1px;
+  letter-spacing: 2px;
 }
 
 .btn:hover {
   background: #f1c01c;
+}
+
+.content-description {
+  padding: 40px 40px 0px 40px;
+}
+
+.title-game-center {
+  font-family: "commando";
+  color: #f1c01c;
+  letter-spacing: 1px;
+}
+
+.experience > span {
+  font-family: "commando";
+  color: #b91466;
+  letter-spacing: 1px;
+}
+
+.experience {
+  font-family: "josefin";
+  font-weight: lighter;
+  font-size: 15px;
+  color: #d2d2d2;
+}
+
+.content-text {
+  font-family: "josefin";
+  font-weight: lighter;
+  color: #d2d2d2;
+}
+
+.container-picture {
+  text-align: right;
+}
+
+.container-picture > img {
+  width: 50%;
 }
 
 .attraction-video-title-container {
@@ -130,51 +116,71 @@ body {
 }
 
 @media screen and (min-width: 768px) {
+  .content-description {
+    padding: 80px;
+  }
 }
 
 /* Nav Desktop */
 @media screen and (min-width: 992px) {
-  .attraction-titles-section {
-    display: none;
-  }
-  .player-picture {
-    display: none;
+  @media screen and (min-width: 992px) {
+    .containe-game {
+      display: flex;
+      padding: 80px 0px 0px 80px;
+      justify-content: space-around;
+    }
+
+    .content-description {
+      max-width: 700px;
+    }
+
+    .content-description {
+      padding: 0px;
+      margin-top: 45px;
+    }
+
+    .title-game-center {
+      font-size: 25px;
+    }
+
+    .experience {
+      font-size: 18px;
+    }
+
+    .container-picture {
+      margin-top: auto;
+      margin-bottom: auto;
+    }
+
+    .container-picture > img {
+      width: 92%;
+      margin-left: 30px;
+    }
+
+    .btn {
+      font-size: 12px;
+    }
   }
 
-  .desktop-attraction-description {
-    display: flex;
-  }
+  @media screen and (min-width: 1200px) {
+    .title-game-center {
+      margin-top: 60px;
+      font-size: 30px;
+    }
 
-  .desktop-title-container {
-    flex: 1;
-  }
+    .experience {
+      font-size: 20px;
+    }
 
-  .desktop-player-picture {
-    display: block;
-    position: relative;
-    width: 46%;
-    bottom: 113px;
-  }
+    .content-text {
+      width: 80%;
+      margin-top: 30px;
+      font-size: 18px;
+    }
 
-  .attraction-description {
-    display: none;
-  }
-
-  .attraction-paragraph {
-    margin-left: 50px;
-  }
-
-  .attraction-title {
-    margin-left: 50px;
-    font-size: 20px;
-    font-family: "commando";
-    letter-spacing: 1px;
-  }
-
-  .attraction-subtitle {
-    color: white;
-    font-family: "josefin";
-    margin: 50px;
+    .btn {
+      font-size: 14px;
+    }
   }
 
   .attraction-youtube-video {
@@ -190,12 +196,4 @@ body {
     margin: 20px;
     width: 100%;
   }
-
-  .btn {
-    margin-left: 50px;
-  }
-}
-
-/* Nav Desktop */
-@media screen and (min-width: 1200px) {
 }
