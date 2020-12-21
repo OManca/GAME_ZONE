@@ -1,4 +1,4 @@
-.selction {
+.selection {
     display: flex;
 }
 .park_paln img {
@@ -29,3 +29,13 @@
 .block-text {
     display: flex;
 }
+@media screen and (max-width: 1000px){
+    .selction {
+        flex-direction: column;
+    }
+    .park_paln img {
+        width: 90%;
+        height: auto;
+    }
+}
+
