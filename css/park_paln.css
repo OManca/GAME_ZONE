@@ -1,10 +1,18 @@
-section {
+.selction {
     display: flex;
 }
-img {
+.park_paln {
+    padding: 70px 80px;
+}
+.park_paln img {
     position: absolute;
     width: auto;
     height: 550px;
+}
+.checkbox {
+    display: flex;
+    flex-direction: row-reverse;
+    align-self: baseline;
 }
 .search {
     display: flex ;
